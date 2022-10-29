@@ -155,9 +155,6 @@ void cm_pwlts(ARGS)  /* structure holding parms,
     double test1;           /* debug testing value */
     double test2;           /* debug testing value */
     double *last_x_value;   /* static variable for limiting */
-    double test;            /* temp storage variable for limit testing */
-
-    Mif_Complex_t ac_gain;
 
     CALLBACK = cm_pwlts_callback;
 

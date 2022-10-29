@@ -261,6 +261,8 @@ static void clear_name_list(NAME_ENTRY nelist, char *msg)
 #ifdef TRACE
     printf("%s\n", msg);
     print_name_list(nelist);
+#else
+    (void)msg;
 #endif
     for (x = nelist; x; x = next) {
         next = x->next;
@@ -1452,7 +1454,7 @@ static struct instance_hdr *create_instance_header(char *line)
     return hdr;
 }
 
-char *new_inverter(char *iname, char *node, Xlatorp xlp)
+static char *new_inverter(char *iname, char *node, Xlatorp xlp)
 {
     /* Return the name of the output of the new inverter */
     /* tfree the returned string after it has been used by the caller */
